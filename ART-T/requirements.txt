@@ -1,0 +1,6 @@
+fastmcp
+typer
+spacy
+langgraph
+langchain
+pydantic
