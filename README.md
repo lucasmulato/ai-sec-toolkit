@@ -25,3 +25,16 @@ The **AI Red Teaming Toolkit** is a modular framework designed to stress-test La
 git clone [https://github.com/lucasmulato/AI-Red-Teaming-Toolkit.git](https://github.com/lucasmulato/AI-Red-Teaming-Toolkit.git)
 cd AI-Red-Teaming-Toolkit
 pip install -r requirements.txt
+
+## 🛠️ Key Features
+* **Tri-Stage PII Auditing:** A high-fidelity pipeline combining deterministic Regex, Named Entity Recognition (NER) via spaCy, and Semantic LLM-as-a-Judge reasoning to detect unauthorized data disclosure.
+
+## 🗺️ Roadmap
+
+   - [x] Phase 1: Core CLI and Basic PII Scanner
+
+   - [ ] Phase 2: LangGraph-based Adaptive Attack Engine
+
+   - [ ] Phase 3: RAG Poisoning & Vector DB Stress Testing
+
+   - [ ] Phase 4: Full FastMCP Server integration
