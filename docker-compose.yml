@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # The AI Red Teaming Toolkit Service
+  art-t:
+    build: .
+    container_name: artt_production
+    restart: unless-stopped
+    depends_on:
+      - redis
+    networks:
+      - pai_network
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist the Campaign Memory DB and Logs
+      - ./backups:/app/backups
+      - ./logs:/app/logs
+    env_file:
+      - .env.prod
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4G
+
+  # Redis for Rate Limiting & Queue Management
+  redis:
+    image: redis:7-alpine
+    container_name: artt_redis
+    restart: always
+    networks:
+      - pai_network
+    command: redis-server --save 60 1 --loglevel warning
+    volumes:
+      - redis_data:/data
+
+networks:
+  pai_network:
+    driver: bridge
+
+volumes:
+  redis_data:
+

@@ -1,0 +1,17 @@
+# Core Frameworks
+fastmcp==0.3.1
+typer==0.9.0
+spacy==3.7.2
+langgraph==0.0.15
+langchain==0.1.0
+
+# Security & Data
+pydantic==2.5.3
+redis==5.0.1  # Added for Production Rate Limiting
+cryptography==41.0.7 # For secure token handling if needed
+
+# Async & Utilities
+aiohttp==3.9.1
+rich==13.7.0
+PyYAML==6.0.1
+
