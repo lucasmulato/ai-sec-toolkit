@@ -98,7 +98,7 @@ ipython_config.py
 #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
 # poetry.
 
-.node_modules/
+node_modules/
 
 # Celery stuff
 celerybeat-schedule
@@ -139,3 +139,5 @@ dmypy.json
 
 # Pyre
 .pyre   
+
+.next
