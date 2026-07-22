@@ -1,10 +1,9 @@
 /// <reference types="react" />
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   ShieldAlert, 
   Terminal, 
   Activity, 
-  LayoutDashboard, 
   Zap, 
   Skull, 
   Database, 
@@ -21,8 +20,8 @@ const INITIAL_LOGS = [
 ];
 
 const C2Dashboard: React.FC = () => {
-  const [logs, setLogs] = useState(INITIAL_LOGS);
-  const [riskScore, setRiskScore] = useState(68);
+  const [logs] = useState(INITIAL_LOGS);
+  const [riskScore] = useState(68);
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-300 font-mono selection:bg-emerald-500/30">

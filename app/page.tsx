@@ -15,9 +15,9 @@ import {
 
 // Mock data for initial states
 const INITIAL_LOGS = [
-  { id: 1, type: 'info', msg: 'ART-T Engine Initialized. Multi-agent orchestration ready.' },
-  { id: 2, type: 'warn', msg: 'Monitoring LangGraph nodes: [evaluator, generator, hitl_gate]' },
-  { id: 3, type: 'error', msg: 'Critical: Potential Excessive Agency detected in agent-bot-04' }
+  { id: 1, type: 'info', time: '10:42:01', msg: 'ART-T Engine Initialized. Multi-agent orchestration ready.' },
+  { id: 2, type: 'warn', time: '10:42:05', msg: 'Monitoring LangGraph nodes: [evaluator, generator, hitl_gate]' },
+  { id: 3, type: 'error', time: '10:43:12', msg: 'Critical: Potential Excessive Agency detected in agent-bot-04' }
 ];
 
 export default function Page() {
@@ -130,7 +130,7 @@ export default function Page() {
             </div>
             {logs.map((log) => (
               <div key={log.id} className="mb-1 leading-relaxed">
-                <span className="text-zinc-600">[{new Date().toISOString().split('T')[1].split('.')[0]}]</span>{' '}
+                <span className="text-zinc-600">[{log.time}]</span>{' '}
                 <span className={log.type === 'error' ? 'text-rose-500' : log.type === 'warn' ? 'text-amber-500' : 'text-emerald-500'}>
                   {log.type.toUpperCase()}:
                 </span>{' '}
